@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "d8361324-b1ad-404f-ab0b-f874f38587f2",
+		"name": "Usuarios",
+		"description": "Colección de pruebas para la gestión de usuarios en el sistema de reservas de vuelos.\n\nIncluye:\n\n- `GET /usuarios` - Listar todos los usuarios (solo ADMIN)\n    \n- `GET /usuarios/{id}` - Obtener usuario por ID (ADMIN o el propio usuario)\n    \n- `POST /usuarios/registro` - Registrar un nuevo usuario (público)\n    \n- `PUT /usuarios/{id}` - Actualizar usuario (ADMIN o el propio usuario)\n    \n- `PATCH /usuarios/{id}/cambiar-contrasena` - Cambiar contraseña (ADMIN o el propio usuario)\n    \n- `DELETE /usuarios/{id}` - Eliminar usuario (solo ADMIN)\n    \n\nEsta colección permite validar el flujo completo de gestión de cuentas, roles y contraseñas.  \nRequiere autenticación JWT en la mayoría de las rutas.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41533904"
+	},
+	"item": [
+		{
+			"name": "listarUsuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc0MzEyNTUzNiwiZXhwIjoxNzQzMTI5MTM2fQ.Z1f2P2gJoJ643vgJDnnwokkEIGIB9AwTRaXwHw5Mzd81CZZguSaXoeg3WlfdXlb6NyT9m-aH-AQjhRxAFq3HJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerUsuarioPorId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGllbnRlQGV4YW1wbGUuY29tIiwicm9sZXMiOiJST0xFX0NMSUVOVEUiLCJpYXQiOjE3NDMxMjI1MDgsImV4cCI6MTc0MzEyNjEwOH0.ctzmZCfDI6NGJDIYjGXaXkS3r9vt_HLXAK6dsXTwUx8MptiDoyBILrr8eFbp-OqclP-nKZMMvbj3K9MP3h28uA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/usuarios/14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc0MzEyNTUzNiwiZXhwIjoxNzQzMTI5MTM2fQ.Z1f2P2gJoJ643vgJDnnwokkEIGIB9AwTRaXwHw5Mzd81CZZguSaXoeg3WlfdXlb6NyT9m-aH-AQjhRxAFq3HJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/usuarios/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGllbnRlQGV4YW1wbGUuY29tIiwicm9sZXMiOiJST0xFX0NMSUVOVEUiLCJpYXQiOjE3NDMxMjI1MDgsImV4cCI6MTc0MzEyNjEwOH0.ctzmZCfDI6NGJDIYjGXaXkS3r9vt_HLXAK6dsXTwUx8MptiDoyBILrr8eFbp-OqclP-nKZMMvbj3K9MP3h28uA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Castillo\",\r\n    \"email\": \"cliente@example.com\",\r\n    \"rol\": \"CLIENTE\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistroUsuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Nolasco\",\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"12345\",\r\n    \"rol\": \"ADMIN\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/registro",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarPassword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGllbnRlQGV4YW1wbGUuY29tIiwicm9sZXMiOiJST0xFX0NMSUVOVEUiLCJpYXQiOjE3NDMxMjI1MDgsImV4cCI6MTc0MzEyNjEwOH0.ctzmZCfDI6NGJDIYjGXaXkS3r9vt_HLXAK6dsXTwUx8MptiDoyBILrr8eFbp-OqclP-nKZMMvbj3K9MP3h28uA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contrasenaActual\": \"jesus123\",\r\n    \"nuevaContrasena\": \"12345\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/14/cambiar-contrasena",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"14",
+						"cambiar-contrasena"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

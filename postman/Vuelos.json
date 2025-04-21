@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "f31d8925-82a8-4596-8c37-638a602b5ebf",
+		"name": "Vuelos",
+		"description": "Colección enfocada en la gestión de vuelos dentro del sistema.\n\nIncluye:\n\n- `GET /vuelos` - Listar todos los vuelos\n    \n- `GET /vuelos/buscar` - Buscar por origen y destino\n    \n- `GET /vuelos/buscar/{id}` - Obtener vuelo por ID\n    \n- `POST /vuelos` - Crear nuevo vuelo (solo ADMIN)\n    \n- `PUT /vuelos/{id}` - Actualizar vuelo (solo ADMIN)\n    \n- `DELETE /vuelos/{id}` - Eliminar vuelo (solo ADMIN)\n    \n\nÚtil para probar filtros, búsquedas y administración de vuelos.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41533904"
+	},
+	"item": [
+		{
+			"name": "listarVuelos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGllbnRlQGV4YW1wbGUuY29tIiwicm9sZXMiOiJST0xFX0NMSUVOVEUiLCJpYXQiOjE3NDMxMjI1MDgsImV4cCI6MTc0MzEyNjEwOH0.ctzmZCfDI6NGJDIYjGXaXkS3r9vt_HLXAK6dsXTwUx8MptiDoyBILrr8eFbp-OqclP-nKZMMvbj3K9MP3h28uA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/vuelos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscarVuelos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGllbnRlQGV4YW1wbGUuY29tIiwicm9sZXMiOiJST0xFX0NMSUVOVEUiLCJpYXQiOjE3NDMxMjI1MDgsImV4cCI6MTc0MzEyNjEwOH0.ctzmZCfDI6NGJDIYjGXaXkS3r9vt_HLXAK6dsXTwUx8MptiDoyBILrr8eFbp-OqclP-nKZMMvbj3K9MP3h28uA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/vuelos/buscar?origen=mexico&destino=guadalajara",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "origen",
+							"value": "mexico"
+						},
+						{
+							"key": "destino",
+							"value": "guadalajara"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obetenerVueloPorId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGllbnRlQGV4YW1wbGUuY29tIiwicm9sZXMiOiJST0xFX0NMSUVOVEUiLCJpYXQiOjE3NDMxMjI1MDgsImV4cCI6MTc0MzEyNjEwOH0.ctzmZCfDI6NGJDIYjGXaXkS3r9vt_HLXAK6dsXTwUx8MptiDoyBILrr8eFbp-OqclP-nKZMMvbj3K9MP3h28uA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/vuelos/buscar/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos",
+						"buscar",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearVuelos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc0MzEyNTUzNiwiZXhwIjoxNzQzMTI5MTM2fQ.Z1f2P2gJoJ643vgJDnnwokkEIGIB9AwTRaXwHw5Mzd81CZZguSaXoeg3WlfdXlb6NyT9m-aH-AQjhRxAFq3HJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"aerolinea\": \"Avianca\",\r\n    \"origen\": \"Bogotá\",\r\n    \"destino\": \"México\",\r\n    \"fechaSalida\": \"2025-03-10T10:00:00\",\r\n    \"fechaLlegada\": \"2025-03-10T14:00:00\",\r\n    \"precio\": 1350.00,\r\n    \"asientosDisponibles\": 25\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/vuelos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarVuelo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc0MzEyNTUzNiwiZXhwIjoxNzQzMTI5MTM2fQ.Z1f2P2gJoJ643vgJDnnwokkEIGIB9AwTRaXwHw5Mzd81CZZguSaXoeg3WlfdXlb6NyT9m-aH-AQjhRxAFq3HJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"aerolinea\": \"Latam Airlines\",\r\n    \"origen\": \"Bogotá\",\r\n    \"destino\": \"Nueva York\",\r\n    \"fechaSalida\": \"2025-03-15T08:00:00\",\r\n    \"fechaLlegada\": \"2025-03-15T14:00:00\",\r\n    \"precio\": 450.00,\r\n    \"asientosDisponibles\": 15\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/vuelos/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarVuelos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc0MzEyNTUzNiwiZXhwIjoxNzQzMTI5MTM2fQ.Z1f2P2gJoJ643vgJDnnwokkEIGIB9AwTRaXwHw5Mzd81CZZguSaXoeg3WlfdXlb6NyT9m-aH-AQjhRxAFq3HJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/vuelos/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

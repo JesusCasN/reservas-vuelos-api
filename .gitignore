@@ -1,0 +1,64 @@
+# ============================
+# 📦 Java + Spring Boot + Maven
+# ============================
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+logs/
+spring.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# ============================
+# 🔨 Maven
+# ============================
+target/
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+# ============================
+# 💡 IntelliJ IDEA
+# ============================
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ============================
+# 🌱 Spring Tool Suite (STS)
+# ============================
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+# ============================
+# ⚙️ NetBeans
+# ============================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ============================
+# 🧠 VS Code
+# ============================
+.vscode/
+
+# ============================
+# 🖥️ SO y archivos ocultos
+# ============================
+.DS_Store
+Thumbs.db

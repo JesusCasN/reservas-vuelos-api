@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "9bea4087-aa17-49bf-a940-60c385ee780d",
+		"name": "Auntenticacion",
+		"description": "Colección para probar el proceso de autenticación del sistema de reservas de vuelos.\n\nIncluye:\n\n- Petición de inicio de sesión (POST /auth/login)\n    \n- Generación de token JWT para usar en otras colecciones\n    \n\nRequiere email y contraseña válidos.  \nIdeal para probar seguridad y manejo de roles (CLIENTE, ADMIN).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41533904"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"cliente@example.com\",\r\n\"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "423f3f11-662f-4b5d-ae1e-aed196e55ff7",
+		"name": "Reservas",
+		"description": "Colección para probar el flujo completo de reservas de vuelos.\n\nIncluye:\n\n- `GET /reservas` - Listar todas las reservas (solo ADMIN)\n    \n- `GET /reservas/usuario/{usuarioId}` - Ver reservas de un usuario (CLIENTE o ADMIN)\n    \n- `GET /reservas/{id}` - Obtener una reserva específica\n    \n- `POST /reservas` - Crear una nueva reserva (solo CLIENTE)\n    \n- `PUT /reservas/{id}` - Actualizar estado (por ejemplo, CANCELADA) (solo ADMIN)\n    \n- `DELETE /reservas/{id}` - Eliminar reserva (solo ADMIN)\n    \n\nRequiere autenticación JWT. Pruebas listas para validar cambios de estado, cancelaciones y creación.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41533904"
+	},
+	"item": [
+		{
+			"name": "crearReserva",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGllbnRlQGV4YW1wbGUuY29tIiwicm9sZXMiOiJST0xFX0NMSUVOVEUiLCJpYXQiOjE3NDMxNDE1NzMsImV4cCI6MTc0MzE0NTE3M30.tVwKglski80PjFIINK5xiig5KANNERpGMeRxEDX1CHq6pmsO2V4Snn3wC3oSJmWrtm1ocXyonXo7Ugiwrrgw7w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuarioId\": 14,\r\n    \"vueloId\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/reservas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerReservaPorId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGllbnRlQGV4YW1wbGUuY29tIiwicm9sZXMiOiJST0xFX0NMSUVOVEUiLCJpYXQiOjE3NDMxMTc0MDgsImV4cCI6MTc0MzEyMTAwOH0.TZ4aF8Rxo8agVsqrm7eIhpfVudny0x67HzS0_a8xAayjiKdlai1M24m1FXnTAurI3faPnrYXiSwiFmZwfJgnHg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/reservas/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarReservas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc0MzEyNTUzNiwiZXhwIjoxNzQzMTI5MTM2fQ.Z1f2P2gJoJ643vgJDnnwokkEIGIB9AwTRaXwHw5Mzd81CZZguSaXoeg3WlfdXlb6NyT9m-aH-AQjhRxAFq3HJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/reservas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerReservasPorUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGllbnRlQGV4YW1wbGUuY29tIiwicm9sZXMiOiJST0xFX0NMSUVOVEUiLCJpYXQiOjE3NDMxMTc0MDgsImV4cCI6MTc0MzEyMTAwOH0.TZ4aF8Rxo8agVsqrm7eIhpfVudny0x67HzS0_a8xAayjiKdlai1M24m1FXnTAurI3faPnrYXiSwiFmZwfJgnHg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/reservas/usuario/14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"usuario",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarReserva",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc0MzEzMzAyNSwiZXhwIjoxNzQzMTM2NjI1fQ.-yiRn2WtBYVNHmbSUyhng8kzRlg3AWGwg1wIAuUyPRZjCvBOwRzXN11KfhPT8TXwmD0DuWW2rWTU4TtNqPl64Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"estado\": \"CANCELADA\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/reservas/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarReserva",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc0MzEyNTUzNiwiZXhwIjoxNzQzMTI5MTM2fQ.Z1f2P2gJoJ643vgJDnnwokkEIGIB9AwTRaXwHw5Mzd81CZZguSaXoeg3WlfdXlb6NyT9m-aH-AQjhRxAFq3HJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/reservas/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
