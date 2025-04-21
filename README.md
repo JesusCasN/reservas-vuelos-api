@@ -153,7 +153,7 @@ Si deseas conocer más sobre mis proyectos y experiencia, puedes visitar mi port
     <strong>José de Jesús Castillo Nolasco</strong> 👨‍💻<br>
     Desarrollador Backend Java Junior 💻 ☕ 🚀
   </div>
-  <img src="https://private-user-images.githubusercontent.com/74038190/240815068-993370af-11f4-48e7-9e0d-e5b79c2e7890.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDUxOTc3NTcsIm5iZiI6MTc0NTE5NzQ1NywicGF0aCI6Ii83NDAzODE5MC8yNDA4MTUwNjgtOTkzMzcwYWYtMTFmNC00OGU3LTllMGQtZTViNzljMmU3ODkwLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA0MjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDIxVDAxMDQxN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRkYTg4OTI5ODE0MTNmNjljYWVlZTIwMTYzOTc4YjlmNjQ4ZjgwNGViMGM3MDMyODI4MzY5NjBhNzIwMWNlMjkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0._gxTC_sC5jiZahjlax0DK5ai7RitdQro2wbjIqNz7QM" width="250" alt="Developer gif">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzE5ZWpya2UzaGUyNzZyMXBsbXR3NzVranpiZ3QyeGF0c29qZGlpMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JqmupuTVZYaQX5s094/giphy.gif" width="250" alt="Developer gif">
 </div>
 
 ---
