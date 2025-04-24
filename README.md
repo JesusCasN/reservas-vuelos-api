@@ -151,7 +151,7 @@ Si deseas conocer más sobre mis proyectos y experiencia, puedes visitar mi port
 <div style="display: flex; align-items: center; justify-content: space-between;">
   <div>
     <strong>José de Jesús Castillo Nolasco</strong> 👨‍💻<br>
-    Desarrollador Backend Java Junior 💻 ☕ 🚀
+    Desarrollador Backend Java 💻 ☕ 🚀
   </div>
   <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzE5ZWpya2UzaGUyNzZyMXBsbXR3NzVranpiZ3QyeGF0c29qZGlpMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JqmupuTVZYaQX5s094/giphy.gif" width="250" alt="Developer gif">
 </div>
